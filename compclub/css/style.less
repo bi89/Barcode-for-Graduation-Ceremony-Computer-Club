@@ -1,0 +1,103 @@
+.textshadow (dark, @alpha) {
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, @alpha);
+}
+.textshadow (light, @alpha) {
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, @alpha);
+}
+.textshadowtop (dark, @alpha) {
+	text-shadow: 0px -1px 1px rgba(0, 0, 0, @alpha);
+}
+.textshadowtop (light, @alpha) {
+	text-shadow: 0px -1px 1px rgba(255, 255, 255, @alpha);
+}
+.gradient (@color1, @color2, @default){
+	background: @default;
+	background: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -o-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -ms-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: linear-gradient(to bottom,  @color1 0%,@color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="@{color1}", endColorstr="@{color2}",GradientType=0 );
+}
+.gradient (@color1, @color2){
+	background: @color1;
+	background: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -o-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -ms-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: linear-gradient(to bottom,  @color1 0%,@color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="@{color1}", endColorstr="@{color2}",GradientType=0 );
+}
+.gradientdark (@color1, @color2, @p){
+	@icolor1: darken(@color1, @p);
+	@icolor2: darken(@color2, @p);
+	.gradient (darken(@color1, @p), darken(@color2, @p));
+}
+.innertop (dark, @alpha){
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, @alpha);
+	box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, @alpha);
+}
+.innertop (light, @alpha){
+	-webkit-box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, @alpha);
+	box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, @alpha);
+}
+.bgeffect{
+	-webkit-transition: background 0.3s ease;
+	-moz-transition: background 0.3s ease;
+	-ms-transition: background 0.3s ease;
+	-o-transition: background 0.3s ease;
+	transition: background 0.3s ease;
+}
+li{
+	line-height: 25px;	
+}
+/*---------------- GENERAL ----------------*/
+body{
+	margin: 0;
+	font-size: 15px;
+	line-height: 25px;
+	color: #4d4d4d;
+	background: url(../img/bg.png) 0 0 repeat;
+}
+h1{
+	font-family: 'rsu', Tahoma, sans-serif;
+	font-size: 34px;
+	font-weight: 600;
+}
+h2{
+	font-family: 'rsu', Tahoma, sans-serif;
+	font-size: 34px;
+	font-weight: 600;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.alignleft{
+	float: left;
+	margin: 0 30px 25px 0;
+}
+.alignright{
+	float: right;
+	margin: 0 0 25px 30px;
+}
+.center{
+	text-align: center;
+}
+.clear{
+	clear: both;
+}
+.hero-unit{
+	padding: 20px 60px;
+}
+#list-table thead th{
+	color: #08c;
+}
+#list-table thead th:hover{
+	color: #000;
+	cursor: pointer;
+}

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script> 
+	<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+	<script src="js/jquery.metadata.js" type="text/javascript"></script> 
+	<script src="js/jquery.tablesorter.min.js" type="text/javascript"></script> 
+	<script src="js/less.js" type="text/javascript"></script>
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+	<![endif]--> 
+	<script>
+	$(document).ready(function() { 
+        $("#list-table").tablesorter(); 
+    }); 
+	</script>
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-inner">
+		<a class="brand" href="index.html">ระบบบลาๆ</a>
+		<ul class="nav">
+			<li><a href="index.html">ค้นหาที่นั่ง</a></li>
+			<li><a href="check.html">เช็คชื่อ</a></li>
+			<li><a href="print.html">พิมพ์บาร์โค๊ด</a></li>
+			<li class="active"><a href="list.html">รายชื่อทั้งหมด</a></li>
+		</ul>
+	</div>
+</div>
+<div class="container">
+		<form class="form-inline">
+			<input type="text" name="id" placeholder="รหัสนิสิต">
+			<input type="text" name="name" placeholder="ชื่อ นามสกุล">
+			<select>
+				<option>8 พ.ค. 56 เช้า</option>
+				<option>8 พ.ค. 56 บ่าย</option>
+				<option>9 พ.ค. 56 เช้า</option>
+				<option>9 พ.ค. 56 บ่าย</option>
+				<option>10 พ.ค. 56 เช้า</option>
+			</select>
+			<select>
+				<option>คณะ</option>
+				<option>21 วิศวกรรมศาสตร์</option>
+				<option>21 วิศวกรรมศาสตร์</option>
+				<option>21 วิศวกรรมศาสตร์</option>
+				<option>21 วิศวกรรมศาสตร์</option>
+			</select>
+			<button type="submit" class="btn">ค้นหา</button>
+		</form>
+		<hr>
+		<table id="list-table" class="table table-striped">
+			<thead>
+				<tr>
+					<th>รหัสนิสิต</th>
+					<th>ชื่อ นามสกุล</th>
+					<th>คณะ</th>
+					<th width="10%">รายละเอียด</th>
+					<th width="5%">เช็ค 1</th>
+					<th width="5%">เช็ค 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>5212342342</td>
+					<td>นายเอ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212352342</td>
+					<td>นายบี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212442341</td>
+					<td>นายซี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212442342</td>
+					<td>นายดี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212779342</td>
+					<td>นายอี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212096242</td>
+					<td>นางสาวเอฟ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212342342</td>
+					<td>นายเอ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212352342</td>
+					<td>นายบี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212442341</td>
+					<td>นายซี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212442342</td>
+					<td>นายดี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212779342</td>
+					<td>นายอี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212096242</td>
+					<td>นางสาวเอฟ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212342342</td>
+					<td>นายเอ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212352342</td>
+					<td>นายบี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td><i class="icon-ok"></i></td>
+				</tr>
+				<tr>
+					<td>5212442341</td>
+					<td>นายซี ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212442342</td>
+					<td>นายดี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td><i class="icon-ok"></i></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212779342</td>
+					<td>นายอี ใจดี</td>
+					<td>วิศวกรรมศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5212096242</td>
+					<td>นางสาวเอฟ ใจดี</td>
+					<td>อักษรศาสตร์</td>
+					<td><a href="#"><i class="icon-plus-sign"></i></a></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+
+</body>
+</html>

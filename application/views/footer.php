@@ -1,0 +1,4 @@
+</div>
+<?=$file;?>
+</body>
+</html>

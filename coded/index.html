@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet/less" type="text/css" href="css/style.less" />
+	<script src="js/jquery-1.9.1.js" type="text/javascript"></script> 
+	<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+	<script src="js/less.js" type="text/javascript"></script>
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+	<![endif]--> 
+</head>
+<body>
+<div class="navbar">
+	<div class="navbar-inner">
+		<a class="brand" href="index.html">ระบบบลาๆ</a>
+		<ul class="nav">
+			<li class="active"><a href="index.html">เช็คชื่อ</a></li>
+			<li><a href="list.html">ทะเบียน</a></li>
+			<li><a href="list2.html">คนที่ไม่มา</a></li>
+		</ul>
+	</div>
+</div>
+<div class="container">
+		<form class="form-inline" action="index-2.html" method="POST">
+			<input type="text" name="id" class="input-small" placeholder="รหัสนิสิต">
+			<input type="text" name="name" placeholder="ชื่อ นามสกุล">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="date">วันที่&nbsp;&nbsp;</label>
+			<input type="text" class="input-small" name="date" value="17/6/13">
+			<select class="input-small">
+				<option>เช้า</option>
+				<option>บ่าย</option>
+			</select>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<button type="submit" class="btn btn-primary">เช็คชื่อ</button>
+			<button type="button" class="btn">ยกเลิก</button>
+		</form>
+		<hr>
+</div>
+
+</body>
+</html>
