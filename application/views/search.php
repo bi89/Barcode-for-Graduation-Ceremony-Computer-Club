@@ -37,6 +37,7 @@
             <thead>
                 <tr>
                     <th>ลำดับ</th>
+                    <th>เลขนิสิต</th>
                     <th>ชื่อ นามสกุล</th>
                     <th>คณะ</th>
                     <th width="5%">รอบ 1</th>
@@ -54,7 +55,8 @@
             ?>
                 <tr <?php if($status_class) echo 'class="'.$status_class.'"';?>>
                     <td><?=$row['order'];?></td>
-                    <td><a title="<?=$row['id'];?>"><?=$row['name'];?></a></td>
+                    <td><?=$row['id'];?></td>
+                    <td><?=$row['name'];?></td>
                     <td><?=$row['faculty_name'];?></td>
                     <td><a title="<?=date('j M Y - G:i', strtotime($row['round1_date']));?>"><i class="icon-check<?=$row['round1_status'] == 'ok' ? '' : '-empty'; ?>"></i></a></td>
                     <td><a title="<?=date('j M Y - G:i', strtotime($row['round2_date']));?>"><i class="icon-check<?=$row['round2_status'] == 'ok' ? '' : '-empty'; ?>"></i></a></td>

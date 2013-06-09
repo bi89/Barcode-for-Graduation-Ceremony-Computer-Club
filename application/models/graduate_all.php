@@ -5,6 +5,19 @@ class graduate_all extends CI_Model {
 		//default
 	}
 
+	public function get_all_graduate(){
+		$args = func_get_args();
+		if(!$args){
+			$this->db->select()->from('graduate_all');
+		} else {
+			$this->db->select($args)->from('graduate_all');
+		}
+		$query = $this->db->get();
+		$result = $query->result_array();
+		$query->free_result();
+		return $result;
+	}
+
 	public function get_graduate($id){
 		$this->db->select()->from('graduate_all')->where('id', $id);
 		$query = $this->db->get();

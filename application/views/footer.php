@@ -1,4 +1,4 @@
 </div>
-<?=$file;?>
+<?php if(isset($file)) echo $file; ?>
 </body>
 </html>

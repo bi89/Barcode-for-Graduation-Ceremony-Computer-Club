@@ -7,6 +7,7 @@ class Home extends CI_Controller {
         $this->load->model('graduate_status');
         $this->load->model('round');
         $this->load->model('verifies');
+        $this->load->model('barcode');
         date_default_timezone_set('Asia/Bangkok');
     }
     function index(){
@@ -36,6 +37,10 @@ $(function() {
 
         if($_POST){
             $id = $this->input->post('id');
+            if(strlen($id) == 14){
+                $id = $this->barcode->get_graduate_id($id);
+                echo $id;
+            }
             $round = $this->input->post('round');
             $status = $this->input->post('status');
             $previous_order = $this->input->post('previous');
