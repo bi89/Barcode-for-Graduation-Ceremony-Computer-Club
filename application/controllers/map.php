@@ -16,6 +16,13 @@ class Map extends CI_controller {
             'graduates' => $graduates
         );
 
+        $data['header_data'] = array(
+            'title' => 'Mapping',
+            'page' => 'map',
+        );
+        $data['footer_data'] = array(
+            'file' => '');
+
         if($_POST){
             $this->barcode->add_barcode($_POST['id'], $_POST['barcode_no']);
             $data['id'] = $_POST['id'];

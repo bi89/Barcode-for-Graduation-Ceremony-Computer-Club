@@ -11,6 +11,9 @@
             <?php if($previous): ?>
             <input type="hidden" name="previous" value="<?=$previous?>">
             <?php endif; ?>
+            <?php if(isset($pre_previous)): ?>
+            <input type="hidden" name="pre_previous" value="<?=$pre_previous?>">
+            <?php endif; ?>
             <input type="submit" class="btn" value="เช็คชื่อ">
         </form>
         <hr>
@@ -40,6 +43,9 @@
             <?php if($previous): ?>
             <input type="hidden" name="previous" value="<?=$previous?>">
             <?php endif; ?>
+            <?php if(isset($pre_previous)): ?>
+            <input type="hidden" name="pre_previous" value="<?=$pre_previous?>">
+            <?php endif; ?>
             <input type="submit" class="btn btn-link" value="ยกเลิก">
         </form>
         </h4>
@@ -56,20 +62,21 @@
         <?php endif; ?>
         <?php if($graduate_info): ?>
         <div class="row-fluid profile">
-            <div class="span9">
-                <img src="http://placehold.it/800x800" alt="<?=$graduate_info['image']?>">
-                <?=$graduate_info['image']?>
+            <div class="span4">
+                <img src="<?=base_url()?>assets/nisit/<?=$graduate_info['image']?>.jpg" alt="<?=$graduate_info['image']?>" width="100%">
             </div>
-            <div class="span3">
+            <div class="span5">
                 <h2>ลำดับ</h2>
                 <h1><?=$graduate_info['order']?></h1>
+                <h3 class="name"><?=$graduate_info['name']?></h3>
+                <h3><?=$graduate_info['id']?><br>คณะ<?=$graduate_info['faculty_name']?></h3>
+            </div>
+            <div class="span3">
                 <h3>
                     ซ้อมรอบ 1 <?=$graduate_status['round1_status'] == 'ok' ? '<i class="icon-ok"></i>' : '<i class="icon-remove"></i>'; ?><br>
                     ซ้อมรอบ 2 <?=$graduate_status['round2_status'] == 'ok' ? '<i class="icon-ok"></i>' : '<i class="icon-remove"></i>'; ?><br>
                     รอบจริง <?=$graduate_status['round3_status'] == 'ok' ? '<i class="icon-ok"></i>' : '<i class="icon-remove"></i>'; ?>
                 </h3>
-                <h3 class="name"><?=$graduate_info['name']?></h3>
-                <h3><?=$graduate_info['id']?><br>คณะ<?=$graduate_info['faculty_name']?></h3>
             </div>
         </div>
         <?php endif; ?>

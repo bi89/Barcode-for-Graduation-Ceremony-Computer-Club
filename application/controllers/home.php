@@ -39,11 +39,12 @@ $(function() {
             $id = $this->input->post('id');
             if(strlen($id) == 14){
                 $id = $this->barcode->get_graduate_id($id);
-                echo $id;
             }
             $round = $this->input->post('round');
             $status = $this->input->post('status');
             $previous_order = $this->input->post('previous');
+            $pre_previous_order = $this->input->post('pre_previous');
+            // echo $previous_order;
             $data['round'] = $round;
             $data['graduate_info'] = $this->graduate_info->get_graduate_info($id);
             $current_order = $data['graduate_info']['order'];
@@ -67,6 +68,7 @@ $(function() {
                         $data['flag'] = 'warning';
                     }
                 }
+                $data['pre_previous'] = $previous_order;
             }
 
             $data['previous'] = $data['graduate_info']['order'];
@@ -75,6 +77,8 @@ $(function() {
             }
             if($status == 'cancel'){
                 $data['success'] = $this->verifies->cancel_verify($id, $round);
+                $data['previous'] = $pre_previous_order;
+                $data['pre_previous'] = $pre_previous_order;
             }
             //Get Status AFTER verifying
             $data['graduate_status'] = $this->graduate_status->get_graduate_status($id);
@@ -92,6 +96,7 @@ $(function() {
                 $data['rounds'][$i]['current'] = 1;
             }
         }
+        //echo $data['previous'];
         $data['header_data']['flag'] = $data['flag'];
         $this->load->view('home', $data);
     }

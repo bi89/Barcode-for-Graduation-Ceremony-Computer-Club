@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'vee_cc';
-$db['default']['password'] = '125657';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'vee_cc';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
